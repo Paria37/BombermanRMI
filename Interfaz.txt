@@ -44,3 +44,5 @@ obtenerEstadoCliente(){
         actualizarPantalla(informacionPartida)
     
 }
+
+Putohui
