@@ -12,15 +12,20 @@ import javax.swing.JFrame;
  * @author angel_23
  */
 public class ClienteBoomberman {
-    //InformacionPartida
-
     public static void main(String[] args) {
         if(args.length>1){
             if(args[0].equals("nueva_partida")){
-                //Marco m = new Marco();
-                
+                System.out.println("Ingresa tu nombre\n");
+                String nombre ="x";
+                System.out.println("Ingresa el numero maximo de jugadores\n");
+                int n_max =4;                
+                Marco m = new Marco(nombre,n_max);
+                m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
             }else if(args[0].equals("unirse_partida")){
-                
+                System.out.println("Ingresa tu nombre\n");
+                String nombre ="x";   
+                Marco m = new Marco(nombre);
+                m.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);                
             }else{
                 System.out.println("Ingrese un argumento valido: nueva_partida o unirse_partida\n");
             }
@@ -30,29 +35,26 @@ public class ClienteBoomberman {
     }
 }
 class Marco extends JFrame{
-    public Marco(String modo,String nombre,int n_max) {
-        setVisible(true);
-        setBounds(700, 300, 600, 450);
+    Marco(String nombre,int n_max) {
         BoombermanCiente cliente = new BoombermanCiente();
-        if(modo.equals("nueva_partida")){
-            if (cliente.solicitarNuevaPartida(n_max, nombre)){
-                
-                
-            }else{
-                System.out.println("Error al crear partida\n");
-            }
-        }else if(modo.equals("unirse_partida")){
-            if (cliente.solicitarUnirsePartida(nombre)){
-                
-                
-            }else{
-                System.out.println("Error al crear partida\n");
-            }            
-        }
-        addKeyListener(cliente);
-        
+        if (cliente.solicitarNuevaPartida(n_max, nombre)){
+            setVisible(true);
+            setBounds(700, 300, 600, 450);                
+            addKeyListener(cliente);
+        }else{
+            System.out.println("Error al crear partida\n");
+        }   
     }
-   
+    Marco(String nombre) {
+        BoombermanCiente cliente = new BoombermanCiente();
+        if (cliente.solicitarUnirsePartida(nombre)){
+            setVisible(true);
+            setBounds(700, 300, 600, 450);                
+            addKeyListener(cliente);
+        }else{
+            System.out.println("Error al crear partida\n");
+        }   
+    } 
 }
 class BoombermanCiente implements KeyListener{
     FuncionesCliente funciones;
