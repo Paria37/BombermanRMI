@@ -40,11 +40,11 @@ public class InformacionPartida {
         return posicion_cliente;
     }
 
-    public ArrayList getPosiciones_jugadores() {
+    public ArrayList<Posicion> getPosiciones_jugadores() {
         return posiciones_jugadores;
     }
 
-    public ArrayList getPosiciones_bombas() {
+    public ArrayList<Posicion> getPosiciones_bombas() {
         return posiciones_bombas;
     }
 

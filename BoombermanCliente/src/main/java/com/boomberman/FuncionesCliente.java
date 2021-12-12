@@ -16,10 +16,6 @@ public class FuncionesCliente implements ICliente{
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public boolean solicitarNuevoJugador(String nombre) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
     @Override
     public boolean estaListaPartida() {
@@ -27,7 +23,7 @@ public class FuncionesCliente implements ICliente{
     }
 
     @Override
-    public void movimientoCLiente(short id, short x, short y) {
+    public void movimientoCliente(short id, int x, int y) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -45,6 +41,13 @@ public class FuncionesCliente implements ICliente{
     public boolean eliminacion() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public InformacionPartida solicitarUnirsePartida(String nombre) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+
 
 
 }

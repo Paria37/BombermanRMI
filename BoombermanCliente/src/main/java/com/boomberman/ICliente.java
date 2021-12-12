@@ -11,9 +11,9 @@ import com.boomberman.InformacionPartida;
  */
 public interface ICliente {
     InformacionPartida solicitarNuevaPartida(int N);
-    boolean solicitarNuevoJugador(String nombre);
+    InformacionPartida solicitarUnirsePartida(String nombre);
     boolean estaListaPartida();
-    void movimientoCLiente(short id,short x, short y);
+    void movimientoCliente(short id,int x, int y);
     void ponerBomba(short x, short y);
     InformacionPartida obtenerEstadoJuego();
     boolean eliminacion();

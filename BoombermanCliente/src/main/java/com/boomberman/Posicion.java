@@ -28,5 +28,17 @@ public class Posicion {
     public void setY(int y) {
         this.y = y;
     }
+    public void incX(){
+        this.x++;
+    }
+    public void incY(){
+        this.y++;
+    }
+    public void decX(){
+        this.x--;
+    }
+    public void decY(){
+        this.y--;
+    }    
     
 }
