@@ -5,6 +5,8 @@
  */
 package com.boomberman;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author angel_23
@@ -33,7 +35,7 @@ public class FuncionesCliente implements ICliente{
     }
 
     @Override
-    public InformacionPartida obtenerEstadoJuego() {
+    public ArrayList<Posicion> obtenerEstadoJuego() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

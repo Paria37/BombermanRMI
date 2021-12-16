@@ -13,6 +13,15 @@ import java.util.ArrayList;
  */
 public class InformacionPartida {
     private short idCliente;
+
+    public int getN_jugadores() {
+        return n_jugadores;
+    }
+
+    public void setN_jugadores(int n_jugadores) {
+        this.n_jugadores = n_jugadores;
+    }
+    private int n_jugadores;
     private Posicion posicion_cliente;
     private ArrayList posiciones_jugadores;
     private ArrayList posiciones_bombas;
@@ -51,4 +60,7 @@ public class InformacionPartida {
     public ArrayList getMapa() {
         return mapa;
     }    
+    void setPosicionNuevaJugador(Posicion posicion_anterior,int i) {
+        posiciones_jugadores.set(i, posicion_anterior);
+    }
 }

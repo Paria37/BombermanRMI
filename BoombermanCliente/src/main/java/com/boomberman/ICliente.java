@@ -5,6 +5,7 @@
  */
 package com.boomberman;
 import com.boomberman.InformacionPartida;
+import java.util.ArrayList;
 /**
  *
  * @author angel_23
@@ -15,6 +16,6 @@ public interface ICliente {
     boolean estaListaPartida();
     void movimientoCliente(short id,int x, int y);
     void ponerBomba(short x, short y);
-    InformacionPartida obtenerEstadoJuego();
+    ArrayList<Posicion> obtenerEstadoJuego();
     boolean eliminacion();
 }
